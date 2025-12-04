@@ -34,21 +34,21 @@ std::set<std::shared_ptr<NPC>> simulate_fight(const std::set<std::shared_ptr<NPC
 }
 
 bool VisitorFightBandit::fight(std::shared_ptr<NPC> defender) {
-    if (dynamic_pointer_cast<Bandit>(defender)) {
+    if (std::dynamic_pointer_cast<Bandit>(defender)) {
         return true;
     }
     return false;
 }
 
 bool VisitorFightBear::fight(std::shared_ptr<NPC> defender) {
-    if (dynamic_pointer_cast<Elf>(defender)) {
+    if (std::dynamic_pointer_cast<Elf>(defender)) {
         return true;
     }
     return false;
 }
 
 bool VisitorFightElf::fight(std::shared_ptr<NPC> defender) {
-    if (dynamic_pointer_cast<Bandit>(defender)) {
+    if (std::dynamic_pointer_cast<Bandit>(defender)) {
         return true;
     }
     return false;
