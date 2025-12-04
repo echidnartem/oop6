@@ -20,7 +20,7 @@ void FileObserver::update(const NPC &attacker, const NPC &defender) {
 void ConsoleObserver::update(const NPC &attacker, const NPC &defender) {
     std::cout << "[console observer]: ";
     attacker.print(std::cout) << ' ';
-    std::cout << "kills ";
+    std::cout << " kills ";
     defender.print(std::cout);
     std::cout << '\n';
 }

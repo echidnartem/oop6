@@ -17,12 +17,12 @@ std::shared_ptr<NPC> FactoryNPC::create_npc(const TypeNPC &type, const std::stri
 std::shared_ptr<NPC> FactoryNPC::create_npc_from_file(const TypeNPC &type, std::ifstream& in) {
     switch (type) {
         case TypeNPC::bandit:
-            static Bandit dragon;
+            static Bandit bandit;
 
-            if (in.is_open()) in >> dragon;
+            if (in.is_open()) in >> bandit;
             else throw std::logic_error("File not found");
 
-            return std::make_shared<Bandit>(dragon);
+            return std::make_shared<Bandit>(bandit);
         case TypeNPC::bear:
             static Bear bear;
 
